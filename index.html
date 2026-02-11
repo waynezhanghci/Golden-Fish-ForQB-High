@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zen Koi Pond</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        corePlugins: {
+          preflight: false, // Disable Tailwind's global reset to avoid overriding host font styles
+        }
+      }
+    </script>
+    <style>
+      /* Ensure box-sizing is handled locally since preflight is disabled */
+      *, ::before, ::after {
+        box-sizing: border-box;
+      }
+
+      body, html { 
+        margin: 0; 
+        padding: 0; 
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden; 
+        /* Background color removed as requested for background usage */
+        
+        /* Disable Text Selection (Double click selection) */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
+        /* Disable Webkit Tap Highlight (Mobile) */
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* Disable Dragging for images, links, and canvas */
+      img, a, canvas {
+        -webkit-user-drag: none;
+        user-drag: none;
+        /* Prevent context menu on long press for touch devices */
+        -webkit-touch-callout: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
